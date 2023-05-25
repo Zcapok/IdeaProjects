@@ -17,7 +17,7 @@ public class JasonSimpleReader {
 
         JSONParser parser = new JSONParser();
 
-        try (Reader reader = new FileReader("C:\\Users\\soulw\\IdeaProjects\\Bwv Proj\\src\\main\\java\\de\\stan\\Beispieldatei.csv")) {
+        try (Reader reader = new FileReader("Beispieldatei.csv")) {
 
             JSONObject jsonObject = (JSONObject) parser.parse(reader);
             System.out.println(jsonObject);

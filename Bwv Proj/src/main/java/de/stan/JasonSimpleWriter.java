@@ -22,7 +22,7 @@ public class JasonSimpleWriter {
 
         obj.put("messages", list);
 
-        try (FileWriter file = new FileWriter("C:\\Users\\soulw\\IdeaProjects\\Bwv Proj\\src\\main\\java\\de\\stan\\Beispieldatei.csv")) {
+        try (FileWriter file = new FileWriter("Beispieldatei.csv")) {
             file.write(obj.toJSONString());
         } catch (IOException e) {
             e.printStackTrace();
