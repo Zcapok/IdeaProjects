@@ -16,9 +16,21 @@ public class Main {
         read.setPath("Testfile.txt");
         tmplist = read.readFile();
         
+        System.out.println("Inhalt vor dem Filewriter : ");
         for( String s : tmplist){
             System.out.println(s);
         }
+
+
+        System.out.println("Inhalt nach dem Filewriter : ");
+        file.writeToFile("Testfile.txt");
+
+        tmplist = read.readFile();
+
+        for(String s : tmplist){
+            System.out.println(s);
+        }
+
         
     }
 
