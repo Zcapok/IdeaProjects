@@ -1,0 +1,25 @@
+package JavaFiles;
+
+import java.util.ArrayList;
+
+public class Main {
+    
+    public static void main(String[] args) {
+       
+        ArrayList<String> tmplist= new ArrayList<>();
+
+        FileCreate file = new FileCreate();
+        file.createtheFile("Testfile.txt");
+        
+
+        Fileread read = new Fileread();
+        read.setPath("Testfile.txt");
+        tmplist = read.readFile();
+        
+        for( String s : tmplist){
+            System.out.println(s);
+        }
+        
+    }
+
+}
