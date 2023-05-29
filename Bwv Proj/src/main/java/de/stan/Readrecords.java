@@ -13,7 +13,7 @@ public class Readrecords {
 
 
 
-    public void Readrecord() throws IOException {
+    public void readrecord() throws IOException {
         try(BufferedReader br = new BufferedReader(new FileReader ("Beispieldatei.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {

@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) throws ParseException, IOException {
 
         Readrecords buffreader = new Readrecords();
-        buffreader.Readrecord();
+        buffreader.readrecord();
 
 
 

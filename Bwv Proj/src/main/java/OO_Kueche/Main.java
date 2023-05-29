@@ -1,5 +1,7 @@
 package OO_Kueche;
 
+import java.util.ArrayList;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -49,6 +51,13 @@ public class Main {
 			
 		}
 		
+		ArrayList<String> myStringArray = new ArrayList<>();
+		myStringArray.add(k2.toString());
+		myStringArray.add(Kug1.toString());
+
+		WriteToFile toFile = new WriteToFile();
+		toFile.inputWriter(myStringArray);
+
 	}
 
 }
