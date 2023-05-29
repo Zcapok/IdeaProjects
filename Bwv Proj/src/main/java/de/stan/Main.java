@@ -12,7 +12,13 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws ParseException, IOException {
+
+        Readrecords buffreader = new Readrecords();
+        buffreader.Readrecord();
+
+
+
         String path = "Beispieldatei.csv";
         ArrayList<String> read = new ArrayList<>();
         ReadCsv reader = new ReadCsv();
