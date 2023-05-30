@@ -3,6 +3,7 @@ package OO_Kueche;
 public class FigurFactory {
 
     public enum FigurTyp{DREIECK, RECHTECK, KREIS};
+    
 
     public Figur2d createFigur( FigurTyp typ ){
         Figur2d figur;
@@ -20,6 +21,23 @@ public class FigurFactory {
 
         }
         return null;
+    }
+
+
+    public Figur3d create3D(String typ3D){
+        
+        Figur3d figur;
+
+        switch(typ3D){
+            case "GleichseitigePyramide" :            
+            return figur = new GleichseitigePyramide(new Neck(200, "Neck", 2, 3), 2);
+            
+        }
+
+
+        return null;
+
+
     }
 
 }
