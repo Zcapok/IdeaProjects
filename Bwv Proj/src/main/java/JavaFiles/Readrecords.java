@@ -1,4 +1,4 @@
-package de.stan;
+package JavaFiles;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

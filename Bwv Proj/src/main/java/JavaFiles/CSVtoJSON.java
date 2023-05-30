@@ -1,4 +1,4 @@
-package de.stan;
+package JavaFiles;
 
 public class CSVtoJSON {
 
