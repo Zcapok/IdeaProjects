@@ -1,1 +1,1 @@
-Erster String Zweiter String Dritter String Vierter String
+Erster, StringZweiter, StringDritter, StringVierter, String

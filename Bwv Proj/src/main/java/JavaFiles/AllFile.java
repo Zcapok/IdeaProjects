@@ -31,7 +31,11 @@ public class AllFile {
                 Scanner myScan = new Scanner(myFile);
                 while(myScan.hasNextLine()){
                     String data = myScan.nextLine();
-                    myList.add(data);
+                    String[] str = data.split(",");
+                    for(int i = 0; i < str.length; i++){
+                        myList.add(str[i]);
+                    }
+
                 }
                     myScan.close();
                 System.out.println(myList);    
