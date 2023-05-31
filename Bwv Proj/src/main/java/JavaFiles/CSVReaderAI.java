@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CSVreader {
+public class CSVReaderAI {
     public static void main(String[] args) {
         String fileName = "example.csv";
         File file = new File(fileName);
@@ -21,17 +21,20 @@ public class CSVreader {
         } catch (FileNotFoundException e) {
             System.out.println("File not found: " + fileName);
         }
+
+
         // Factory method to decide whether to read, write or create the file
         CSVFactory factory = new CSVFactory();
-        CSV csv = factory.createCSV("read", fileName);
+        CSV csv = factory.createCSV("create", fileName);
         csv.read(lines);
+
     }
 }
 
 class CSVFactory {
     public CSV createCSV(String type, String fileName) {
         if (type.equalsIgnoreCase("read")) {
-            return new CSVReader(fileName);
+            return new CSVReaders(fileName);
         } else if (type.equalsIgnoreCase("write")) {
             return new CSVWriter(fileName);
         } else if (type.equalsIgnoreCase("create")) {
@@ -50,10 +53,10 @@ interface CSV {
     void create();
 }
 
-class CSVReader implements CSV {
+class CSVReaders implements CSV {
     private String fileName;
 
-    public CSVReader(String fileName) {
+    public CSVReaders(String fileName) {
         this.fileName = fileName;
     }
 
@@ -109,6 +112,7 @@ class CSVCreator implements CSV {
 
     public CSVCreator(String fileName) {
         this.fileName = fileName;
+        create();
     }
 
     @Override
@@ -132,4 +136,3 @@ class CSVCreator implements CSV {
         }
     }
 }
-
