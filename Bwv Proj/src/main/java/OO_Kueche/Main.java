@@ -1,14 +1,19 @@
 package OO_Kueche;
 
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
 	public static void main(String[] args) {
 
+
 		Figur2d fact1 = new FigurFactory().createFigur(FigurFactory.FigurTyp.KREIS);
 		System.out.println(fact1.toString());
 
+		Figur3d fig3d = new FigurFactory().create3D("GleichseitigePyramide");
+		System.out.println(fig3d.oberFläche());
 
 		// Berechnung von Kreis und KreisKegel Ergebnis Korrekt!
 		Kreis k2 = new Kreis(0001, "Kreis2", 1);

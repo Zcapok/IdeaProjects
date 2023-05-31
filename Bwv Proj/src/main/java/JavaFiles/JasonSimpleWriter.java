@@ -1,4 +1,4 @@
-package de.stan;
+package JavaFiles;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
