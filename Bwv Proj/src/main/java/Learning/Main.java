@@ -1,32 +1,32 @@
 package Learning;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Main {
 
+    public static void main(String args[]) {
 
-    public static void main(String args[]){
+        Verwaltung liste = new Verwaltung();
 
-        ArrayList<String> list = new ArrayList<>(Arrays.asList("Tom"));
-        list.add("Tom");
-        list.add("Tam");
-        list.add("Tim");
-        list.add("Tem");
+        Mitarbeiter walter = new Bueroarbeiter(5, "White", "Walter", 37, 2900);
+        System.out.println(walter.toString());
 
+        Mitarbeiter john = new Manager(10, "Carpenter", "John", 55, 3500, 1.20);
+        System.out.println(john.toString());
 
-        String[] testArray = new String[10];
+        Mitarbeiter kalle = new Schichtarbeiter(22, "Gruber", "Kalle", 45, 3400);
 
-        for (int i=0; i < testArray.length; i++){
-            testArray[i] = "Test";
+        liste.addMitarbeiter(walter);
+        liste.addMitarbeiter(john);
+        liste.addMitarbeiter(kalle);
+        //liste.removeMitarbeiter(john);
+        System.out.println(liste.toString());
+
+        for (Mitarbeiter mitarbeiter : liste.getMitarbeiterListe()) {
+            System.out.println(mitarbeiter.toString());
         }
 
-
-        L_ArrayList myArray= new L_ArrayList();
-        myArray.testArray_output(testArray);
-        myArray.testArrayList_output(list);
+        MitarbeiterCSVWriter csvWriter = new MitarbeiterCSVWriter("mitarbeiter.csv");
+        csvWriter.saveMitarbeiterListeToCSV(liste.getMitarbeiterListe());
 
     }
-
 
 }
