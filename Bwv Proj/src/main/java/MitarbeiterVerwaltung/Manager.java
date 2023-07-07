@@ -1,4 +1,4 @@
-package Learning;
+package MitarbeiterVerwaltung;
 
 public class Manager extends Bueroarbeiter {
 
