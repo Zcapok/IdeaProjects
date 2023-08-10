@@ -46,6 +46,12 @@ public class Main {
         BigDecimal bd = new BigDecimal(price);
         System.out.println(bd.setScale(2, RoundingMode.HALF_UP));
 
+        LegoKomposition preisListe = new LegoKomposition();
+
+
     }
+
+
+
 
 }

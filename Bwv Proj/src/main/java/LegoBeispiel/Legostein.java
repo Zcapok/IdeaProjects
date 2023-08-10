@@ -1,6 +1,6 @@
 package LegoBeispiel;
 
-public class Legostein {
+public class Legostein extends LegoBauteil {
     private String farbe;
     private int groesse;
     private double preis;
@@ -21,5 +21,10 @@ public class Legostein {
 
     public int getGroesse() {
         return this.groesse;
+    }
+
+    @Override
+    public double preis() {
+        return getPreis();
     }
 }
