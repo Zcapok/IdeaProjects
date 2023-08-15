@@ -1,4 +1,4 @@
-package Learning;
+package MitarbeiterVerwaltung;
 
 public class Schichtarbeiter extends Mitarbeiter {
 // Gehalt mit getter und setter
@@ -15,7 +15,7 @@ public class Schichtarbeiter extends Mitarbeiter {
     }
 
 
-    public Schichtarbeiter(int id, String name, String vorname, int age, int gehalt) {
+    public Schichtarbeiter(int id, String name, String vorname, int age, int gehalt ) {
         super(id, name, vorname, age);
         setGehalt(gehalt);
     }
@@ -25,6 +25,7 @@ public class Schichtarbeiter extends Mitarbeiter {
     public double einkommensberechnung() {
        return getGehalt();
     }
-    
-    
+
+
+
 }
