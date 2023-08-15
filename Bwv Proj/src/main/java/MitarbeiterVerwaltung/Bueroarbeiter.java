@@ -1,4 +1,4 @@
-package Learning;
+package MitarbeiterVerwaltung;
 
 public class Bueroarbeiter extends Mitarbeiter {
     // Gehalt sowie getter und setter
@@ -27,4 +27,6 @@ public class Bueroarbeiter extends Mitarbeiter {
         double einkommen = Math.round(getGehalt() * 1.15);
         return einkommen;
     }
+
+
 }

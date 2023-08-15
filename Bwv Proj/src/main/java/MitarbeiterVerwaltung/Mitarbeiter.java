@@ -1,4 +1,4 @@
-package Learning;
+package MitarbeiterVerwaltung;
 
 public abstract class Mitarbeiter {
     // name und getter und setter
