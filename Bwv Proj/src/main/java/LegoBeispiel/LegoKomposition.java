@@ -1,10 +1,11 @@
 package LegoBeispiel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LegoKomposition extends LegoBauteil{
 
-    private List<LegoBauteil> teile;
+    private List<LegoBauteil> teile = new ArrayList<>();
 
     @Override
     public double preis() {

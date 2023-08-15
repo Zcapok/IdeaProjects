@@ -47,7 +47,10 @@ public class Main {
         System.out.println(bd.setScale(2, RoundingMode.HALF_UP));
 
         LegoKomposition preisListe = new LegoKomposition();
-
+        preisListe.addTeil(steinRot2);
+        preisListe.addTeil(steinBlau4);
+        System.out.println(preisListe.preis());
+        
 
     }
 
