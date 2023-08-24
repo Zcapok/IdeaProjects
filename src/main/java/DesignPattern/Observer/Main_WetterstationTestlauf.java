@@ -1,8 +1,9 @@
 package DesignPattern.Observer;
 
+import javax.swing.*;
 import java.util.Random;
 
-public class Main_WetterstationTestlauf {
+public class Main_WetterstationTestlauf{
 
     static Random zM = new Random();
 
@@ -18,11 +19,9 @@ public class Main_WetterstationTestlauf {
         WetterVorhersage vorhersage = new WetterVorhersage( aktuell);
 
 
-
-
 //ROL ENDE
         try {
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < 5; i++) {
                 int welcher = zM.nextInt(3);
                 float wert = 0f;
                 switch (welcher) {
@@ -41,6 +40,7 @@ public class Main_WetterstationTestlauf {
                         break;
                 }
                 System.out.println(aktuell + "\n" + vorhersage);
+
                 Thread.sleep(1000);
             }
             wetterDaten.removeObserver(aktuell);
@@ -50,6 +50,9 @@ public class Main_WetterstationTestlauf {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+
+
     }
 
 }
