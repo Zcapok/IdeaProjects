@@ -1,6 +1,9 @@
 package DesignPattern.Observer;
 
 import javax.swing.*;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class Main_WetterstationTestlauf{
@@ -18,6 +21,15 @@ public class Main_WetterstationTestlauf{
         AktuelleBedingungen aktuell = new AktuelleBedingungen(wetterDaten );
         WetterVorhersage vorhersage = new WetterVorhersage( aktuell);
 
+        ActionListener buttonListener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                wetterDaten.notifyObservers();
+            }
+        };
+
+        SwingUtilities.invokeLater(() -> {
+            new WeatherStationFrame("Wetterstation", buttonListener);
+        });
 
 //ROL ENDE
         try {

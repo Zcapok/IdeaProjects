@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class AktuelleBedingungen implements Observer{
-
+    private JLabel displayLabel;
     private WetterDaten aktuell;
 
 
@@ -19,7 +19,7 @@ public class AktuelleBedingungen implements Observer{
     public void update(Object obj) {
       aktuell = (WetterDaten) obj;
             System.out.println("Aktuelle Bedingungen: Temperatur " + aktuell.getTemperatur() + "°C, Feuchtigkeit " + aktuell.getFeuchtigkeit() + "%, Luftdruck " + aktuell.getLuftdruck() + " hPa");
-
+            displayLabel.setText("Aktuelle Bedingungen: " + aktuell.getTemperatur() + "°C, " + aktuell.getFeuchtigkeit() + "% Luftfeuchtigkeit, " + aktuell.getLuftdruck() + " hPa Luftdruck");
     }
 
     @Override
@@ -28,4 +28,14 @@ public class AktuelleBedingungen implements Observer{
                 "aktuell=" + aktuell +
                 '}';
     }
+
+    public void CurrentConditionsDisplay() {
+        JFrame frame = new JFrame("Aktuelle Bedingungen");
+        displayLabel = new JLabel("");
+        frame.add(displayLabel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
 }
