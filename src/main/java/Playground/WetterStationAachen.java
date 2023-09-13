@@ -11,7 +11,7 @@ public class WetterStationAachen implements Observer{
 
     @Override
     public void update() {
-        System.out.println("Temperatur = " + wetterDaten.getTemperatur() + "Feuchtigkeit = " + wetterDaten.getFeuchtigkeit() + "Luftdruck = " + wetterDaten.getLuftdruck());
+        System.out.println("Daten aus Aachen :\n" + "Temperatur = " + wetterDaten.getTemperatur() +"\n" + "Feuchtigkeit = " + wetterDaten.getFeuchtigkeit() + "\n" + "Luftdruck = " + wetterDaten.getLuftdruck() + "\n");
     }
 
 

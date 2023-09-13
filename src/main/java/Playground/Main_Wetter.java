@@ -10,10 +10,11 @@ public class Main_Wetter {
 
      WetterDaten daten = new WetterDaten(25, 60, 1000);
      WetterStationAachen aachen = new WetterStationAachen(daten);
-
+     WetterStationDueren dueren = new WetterStationDueren(daten);
+     WetterGUI gui = new WetterGUI(daten);  
      
      try {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 15; i++) {
             int welcher = zM.nextInt(3);
             float wert = 0f;
             switch (welcher) {
@@ -31,12 +32,15 @@ public class Main_Wetter {
                         daten.setLuftdruck(wert);
                     break;
             }
-            System.out.println(daten + "\n");
-
+           // System.out.println(daten + "\n");
+            aachen.update();
+            dueren.update();
+            gui.updateLabel(daten);
+            
             Thread.sleep(1000);
         }
         //wetterDaten.removeObserver(aktuell);
-        daten.removeObserver(aachen);
+        //daten.removeObserver(aachen);
         Thread.sleep(500);
         daten.setMesswerte(28, 16, 78);
     } catch (InterruptedException e) {
