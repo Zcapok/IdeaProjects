@@ -1,5 +1,4 @@
 package Workers.GUI;
-
 import Workers.mitarbeiter.*;
 
 import java.awt.BorderLayout;
