@@ -37,4 +37,7 @@ public class Verwaltung implements IF_Mitarbeiter {
 
 
     }
+
+    public void addMitarbeiter(Workers.mitarbeiter.Mitarbeiter stan) {
+    }
 }
