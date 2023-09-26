@@ -74,6 +74,8 @@ public class Gui extends JFrame {
                 // Einen neuen Mitarbeiter erstellen und zur Liste hinzufügen
                 Mitarbeiter neuerMitarbeiter = new BueroArbeiter(id, name, gehalt);
                 list.add(neuerMitarbeiter);
+                Model model = new Model();
+                model.saveWorker("mitarbeiter.csv", id, name, gehalt);
 
                 // Die neue Zeile zur Tabelle hinzufügen
                 Object[] row = {neuerMitarbeiter.getID(), neuerMitarbeiter.getName(), neuerMitarbeiter.einkommen()};
@@ -96,6 +98,8 @@ public class Gui extends JFrame {
                 if (selectedRow >= 0) {
                     // Entfernen des ausgewählten Mitarbeiters 
                     tableModel.removeRow(selectedRow);
+                    Model m = new Model();
+                    m.deleteWorker("mitarbeiter.csv", selectedRow);
                 } else {
                     JOptionPane.showMessageDialog(frame, "Bitte eine Zeile auswählen.", "Fehler", JOptionPane.ERROR_MESSAGE);
                 }
