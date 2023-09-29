@@ -48,8 +48,8 @@ public class Gui extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JTextField idField = new JTextField();
-        JTextField nameField = new JTextField();
-        JTextField gehaltField = new JTextField();
+                JTextField nameField = new JTextField();
+                JTextField gehaltField = new JTextField();
 
         Object[] fields = {
             "ID:", idField,
