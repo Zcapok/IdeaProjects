@@ -1,5 +1,6 @@
 package DesignPattern.Compositum;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 
 public class Main {
@@ -21,4 +22,17 @@ public class Main {
         }
     }
 
+=======
+public class Main {
+    
+    public static void main(String[] args){
+
+        Box box1 = new VideoGame("1", 100);
+        Box box2 = new Book("Hamlet", 10);
+
+        CompositeBox listprice = new CompositeBox(box1,box2);
+        System.out.println(listprice.calculatePrice());
+
+    }
+>>>>>>> 06d928863d004784304f1e26bc25e2865468d880
 }
