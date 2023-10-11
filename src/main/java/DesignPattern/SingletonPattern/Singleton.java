@@ -1,4 +1,16 @@
 package DesignPattern.SingletonPattern;
 
-public interface Singleton {
+public final class Singleton {
+
+    private static final Singleton instanz = new Singleton();
+
+    private Singleton(){
+
+    }
+
+    public static Singleton getInstanz(){
+
+        return instanz;
+    }
+
 }
