@@ -20,7 +20,7 @@ public class LegoKomposition extends LegoBauteil{
     public void addTeil(LegoBauteil teil){
        teile.add(teil);
 
-        teile.add(teil);
+        
 
     }
 }
