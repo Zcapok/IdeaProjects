@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
+import javax.swing.plaf.basic.BasicListUI;
+
 public class Main {
 
     public static void main(String[] args){
@@ -60,8 +62,15 @@ public class Main {
         System.out.println(preisListe.preis());
 
 
-    }
+    LegoKomposition listeKomposition = new LegoKomposition();
+        listeKomposition.addTeil(new Legostein("Blau", 2, 0.5));
+        listeKomposition.addTeil(new Legostein("rot", 4, 1.0));
 
+        System.out.println(listeKomposition.preis());
+
+        
+    }
+        
 
 
 

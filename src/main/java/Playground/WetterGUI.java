@@ -22,6 +22,7 @@ private String[] column = {"Temperatur", "Feuchtigkeit", "Luftdruck" };
 private String[][] data ;
 
 private JButton b1;
+private JButton b2;
 
 public WetterGUI(WetterDaten daten){
    initComponets();
@@ -50,12 +51,34 @@ public void initComponets(){
     b1 = new JButton("Klick mich");
     b1.setBounds(10, 400, 100,100);
     b1.setVisible(true);
-    b1.addActionListener(this);
+
+    b2 = new JButton("Klick mich");
+    b2.setBounds(10, 300, 100,100);
+    b2.setVisible(true);
+   // b1.addActionListener(this);
+    b1.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent event){
+            if (event.getSource() == b1) {
+            b1.setText("Nochmal geklickt");
+            timer.start();
+    }
+        }
+    });
+
+    b2.addActionListener((event)-> {
+        if (event.getSource() == b2){
+            b2.setText("Hello");
+            timer.start();
+        }
+    });
+    
+
     
     timer = new Timer(2000, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             b1.setText("Klick mich");
+            b2.setText("Cool");
             timer.stop();
         }
     });
@@ -71,6 +94,7 @@ public void initComponets(){
     frame.add(labelDruck);
     frame.add(labelUPDruck);
     frame.add(b1);
+    frame.add(b2);
     frame.setLayout(null);
     
     frame.setVisible(true);
