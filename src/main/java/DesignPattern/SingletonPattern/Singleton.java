@@ -7,7 +7,7 @@ public final class Singleton {
     private Singleton(){}
 
     public static Singleton getInstanz(){
-
+        
         return instanz;
     }
 
