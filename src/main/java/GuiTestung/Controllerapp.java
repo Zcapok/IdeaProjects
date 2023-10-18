@@ -10,6 +10,10 @@ public class Controllerapp {
         this.view = view;
     }
 
+    public void addObserver(Observer observer) {
+        model.addObserver(observer);
+    }
+
 
 
 

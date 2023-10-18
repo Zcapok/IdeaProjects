@@ -12,6 +12,7 @@ public class Viewapp extends JFrame implements Observer {
 
     Modelapp model;
     JLabel label;
+    
     public Viewapp(Modelapp model){
         this.model = model;
         init();
