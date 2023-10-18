@@ -32,7 +32,7 @@ public class Viewapp extends JFrame implements Observer {
         // neuer Button
         JButton b1 = new JButton("Button1");
         JButton b2 = new JButton("Button2");
-
+        JButton b3 = new JButton("Button3");
         b1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -45,8 +45,17 @@ public class Viewapp extends JFrame implements Observer {
             model.setName("Hans-Peter");
         });    
 
+        b3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                if(e.getSource() == b3){
+                    b1.setText("Button3 Klick");
+                }
+            }
+        });
+
         panel.add(b1,BorderLayout.EAST);
         panel.add(b2,BorderLayout.WEST);
+        panel.add(b3,BorderLayout.CENTER);
         panel.add(label,BorderLayout.SOUTH);
 
         this.add(panel,BorderLayout.NORTH);
