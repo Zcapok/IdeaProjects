@@ -15,7 +15,7 @@ public class SimpleCalculaterTest {
     public void twoPlustwoShouldEqualFour(){
         SimpleCalculator calculator = new SimpleCalculator();
         assertEquals(4, calculator.add(2, 2));
-       // assertThrows("Fehler", calculator.add(2, 5) , IllegalArgumentException.class);
+        //assertThrows(IllegalArgumentException.class, ()-> 5,5 , "Fehler");
         assertSame(calculator.add(2, 4), calculator.add(2, 4));
     }
 }
