@@ -12,6 +12,7 @@ import java.util.List;
 import Mitarbeiter.verwaltung.Abteilung;
 import MitarbeiterVerwaltung.Verwaltung;
 import Workers.mitarbeiter.BueroArbeiter;
+import Workers.mitarbeiter.Manager;
 import Workers.mitarbeiter.Mitarbeiter;
 
 public class Main {
