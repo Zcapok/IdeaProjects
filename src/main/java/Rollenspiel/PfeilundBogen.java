@@ -1,10 +1,37 @@
 package Rollenspiel;
 
-public class PfeilundBogen implements Weaponbehavior {
+public class PfeilundBogen extends Weaponbehavior {
 
     @Override
-    public void useWeapon() {
-        System.out.println("Ich nutze Pfeil & Bogen");
+    public void draw() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'draw'");
     }
-    
+
+    @Override
+    public void prepare() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'prepare'");
+    }
+
+    @Override
+    public void aim() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'aim'");
+    }
+
+    @Override
+    public void strike() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'strike'");
+    }
+
+    @Override
+    public void holster() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'holster'");
+    }
+
+    // public void useWeapon();
+
 }
